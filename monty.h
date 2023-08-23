@@ -1,6 +1,12 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+/*Header files*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -32,4 +38,41 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+* struct process_public_vars - Defines the global variables
+*
+*@id: ID of the current process
+*@script: It contains the commands to be run
+*@line_count: Number of lines in the provide script
+*@head: A pointer to the head of the stack
+*@arg: Argument to the invoked function
+*
+*Description: Global variables for the current process
+*/
+typedef struct process_public_vars
+{
+	int id;
+	FILE *script;
+	size_t line_count;
+	char *arg;
+	stack_t *head;
+} process_t;
+
+/*Global declaration*/
+extern process_t process;
+
+/*Function types*/
+void (*get_opcode(char *identifier))(stack_t **stack, unsigned int line_num);
+void __init__(FILE *script);
+void shutdown(void);
+void free_dlist(stack_t *head);
+
+/*Linked list*/
+stack_t *create_node(const int n);
+stack_t *add_dnodeint(stack_t **head, const int n);
+stack_t *add_dnodeint_end(stack_t **head, const int n);
+
+/*Opcodes routine prototypes*/
+void push(stack_t **head, unsigned int current_line);
+void pall(stack_t **head, unsigned int __attribute__((unused))current_line);
 #endif
