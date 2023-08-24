@@ -43,7 +43,7 @@ void pop(stack_t **head, unsigned int current_line)
 
 	if (!*head)
 	{
-		fprintf(stderr, "L%u: can't pop an empty stack", current_line);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", current_line);
 		exit(EXIT_FAILURE);
 	}
 	*head = (*head)->next;
