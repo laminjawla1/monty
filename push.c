@@ -9,8 +9,6 @@
 void push(stack_t **head, unsigned int current_line)
 {
 	int i = 0;
-	int item;
-	extern process_t process;
 
 	if (!process.arg)
 	{
@@ -28,9 +26,8 @@ void push(stack_t **head, unsigned int current_line)
 		}
 		i++;
 	}
-	item = atoi(process.arg);
 	if (process.id == 1)
-		add_dnodeint(head, item);
+		add_dnodeint(head, atoi(process.arg));
 	else
-		add_dnodeint_end(head, item);
+		add_dnodeint_end(head, atoi(process.arg));
 }

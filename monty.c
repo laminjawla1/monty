@@ -39,7 +39,8 @@ int main(int argc, char *argv[])
 			f = get_opcode(command);
 			if (!f)
 			{
-				fprintf(stderr, "L%ld: unknown instruction %s\n", process.line_count, command);
+				fprintf(stderr, "L%ld: unknown instruction %s\n",
+					process.line_count, command);
 				shutdown();
 				exit(EXIT_FAILURE);
 			}
