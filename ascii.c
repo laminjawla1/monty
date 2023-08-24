@@ -30,12 +30,10 @@ void pstr(stack_t **head, unsigned int __attribute__((unused))current_line)
 		putchar('\n');
 		return;
 	}
-	while (tmp)
+	while (tmp && (tmp->n > ASCII_MIN || tmp->n <= ASCII_MAX))
 	{
-		if (tmp->n < ASCII_MIN || tmp->n > ASCII_MAX)
-			break;
 		putchar(tmp->n);
-		tmp = tmp->prev;
+		tmp = tmp->next;
 	}
 	putchar('\n');
 }
