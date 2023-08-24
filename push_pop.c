@@ -12,7 +12,7 @@ void push(stack_t **head, unsigned int current_line)
 
 	if (!process.arg)
 	{
-		fprintf(stderr, "L%u: usage: push integer", current_line);
+		fprintf(stderr, "L%u: usage: push integer\n", current_line);
 		shutdown();
 		exit(EXIT_FAILURE);
 	}
@@ -20,7 +20,7 @@ void push(stack_t **head, unsigned int current_line)
 	{
 		if (!isdigit(process.arg[i]) && process.arg[i] != '-')
 		{
-			fprintf(stderr, "L%u: usage: push integer", current_line);
+			fprintf(stderr, "L%u: usage: push integer\n", current_line);
 			shutdown();
 			exit(EXIT_FAILURE);
 		}
