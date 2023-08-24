@@ -32,5 +32,5 @@ size_t dlist_len(stack_t *head)
 		len++;
 		head = head->next;
 	}
-	return (len);	
+	return (len);
 }

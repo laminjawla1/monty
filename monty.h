@@ -81,4 +81,5 @@ void pall(stack_t **head, unsigned int __attribute__((unused))current_line);
 void pint(stack_t **head, unsigned int current_line);
 void pop(stack_t **head, unsigned int current_line);
 void swap(stack_t **head, unsigned int current_line);
+void add(stack_t **head, unsigned int current_line);
 #endif
