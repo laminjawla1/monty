@@ -27,9 +27,9 @@ void sub(stack_t **head, unsigned int current_line)
 {
 	if (dlist_len(*head) < 2)
 	{
-		fprintf(stderr, "L%u: can't sub, stack too short", current_line);
+		fprintf(stderr, "L%u: can't sub, stack too short\n", current_line);
 		exit(EXIT_FAILURE);
 	}
-	(*head)->next->n = (*head)->n - (*head)->next->n;
+	(*head)->next->n -= (*head)->n;
 	pop(head, current_line);
 }
