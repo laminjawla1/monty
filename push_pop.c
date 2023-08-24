@@ -31,3 +31,21 @@ void push(stack_t **head, unsigned int current_line)
 	else
 		add_dnodeint_end(head, atoi(process.arg));
 }
+/**
+* pop - Pops the topmost element
+*
+*@head: Head of the linked list
+*@current_line: Current line on the script
+*/
+void pop(stack_t **head, unsigned int current_line)
+{
+	stack_t *tmp = *head;
+
+	if (!*head)
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack", current_line);
+		exit(EXIT_FAILURE);
+	}
+	*head = (*head)->next;
+	free(tmp);
+}

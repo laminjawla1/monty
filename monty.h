@@ -76,4 +76,5 @@ stack_t *add_dnodeint_end(stack_t **head, const int n);
 void push(stack_t **head, unsigned int current_line);
 void pall(stack_t **head, unsigned int __attribute__((unused))current_line);
 void pint(stack_t **head, unsigned int current_line);
+void pop(stack_t **head, unsigned int current_line);
 #endif
