@@ -65,7 +65,10 @@ extern process_t process;
 void (*get_opcode(char *identifier))(stack_t **stack, unsigned int line_num);
 void __init__(FILE *script);
 void shutdown(void);
+
+/*Utilities*/
 void free_dlist(stack_t *head);
+size_t dlist_len(stack *head);
 
 /*Linked list*/
 stack_t *create_node(const int n);

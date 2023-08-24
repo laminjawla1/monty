@@ -16,3 +16,21 @@ void free_dlist(stack_t *head)
 		tmp = head;
 	}
 }
+/**
+* dlist_len - Gets the len of the dlist
+*
+*@head: Head of the linked list
+*
+*Return: len(stack)
+*/
+size_t dlist_len(stack *head)
+{
+	size_t len = 0;
+
+	while (head)
+	{
+		len++;
+		head = head->next;
+	}
+	return (len);	
+}
