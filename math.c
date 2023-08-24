@@ -18,12 +18,18 @@ void add(stack_t **head, unsigned int current_line)
 	pop(head, current_line);
 }
 /**
-* nop - A dummy function
+* sub - Subtract the top two elements of the stack
 *
-*@h: Head of the linked list
-*@l: Current line
+*@head: Head of the stack
+*@current_line: Current line
 */
-void nop(stack_t __attribute__((unused))**h, unsigned int l)
+void sub(stack_t **head, unsigned int current_line)
 {
-	(void)l;
+	if (dlist_len(*head) < 2)
+	{
+		fprintf(stderr, "L%u: can't sub, stack too short", current_line);
+		exit(EXIT_FAILURE);
+	}
+	(*head)->next->n -= (*head)->n;
+	pop(head, current_line);
 }

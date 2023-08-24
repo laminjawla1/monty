@@ -34,3 +34,13 @@ size_t dlist_len(stack_t *head)
 	}
 	return (len);
 }
+/**
+* nop - A dummy function
+*
+*@h: Head of the linked list
+*@l: Current line
+*/
+void nop(stack_t __attribute__((unused))**h, unsigned int l)
+{
+	(void)l;
+}

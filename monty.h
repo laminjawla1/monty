@@ -69,6 +69,7 @@ void shutdown(void);
 /*Utilities*/
 void free_dlist(stack_t *head);
 size_t dlist_len(stack_t *head);
+void nop(stack_t __attribute__((unused))**h, unsigned int l);
 
 /*Linked list*/
 stack_t *create_node(const int n);
@@ -81,6 +82,8 @@ void pall(stack_t **head, unsigned int __attribute__((unused))current_line);
 void pint(stack_t **head, unsigned int current_line);
 void pop(stack_t **head, unsigned int current_line);
 void swap(stack_t **head, unsigned int current_line);
+
+/*Math functions*/
 void add(stack_t **head, unsigned int current_line);
-void nop(stack_t __attribute__((unused))**h, unsigned int l);
+void sub(stack_t **head, unsigned int current_line);
 #endif
