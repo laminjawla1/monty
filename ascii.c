@@ -23,17 +23,14 @@ void pchar(stack_t **head, unsigned int current_line)
 */
 void pstr(stack_t **head, unsigned int __attribute__((unused))current_line)
 {
-	stack_t *tmp = *head;
+	stack_t *tmp;
+	(void)current_line;
 
-	if (!*head)
+	tmp = *head;
+	while (tmp && tmp->n > ASCII_MIN && tmp->n <= ASCII_MAX)
 	{
-		putchar('\n');
-		return;
-	}
-	while (tmp && (tmp->n > ASCII_MIN || tmp->n <= ASCII_MAX))
-	{
-		putchar(tmp->n);
+		printf("%c", tmp->n);
 		tmp = tmp->next;
 	}
-	putchar('\n');
+	printf("\n");
 }
