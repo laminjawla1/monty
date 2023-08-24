@@ -16,3 +16,19 @@ void pall(stack_t **head, unsigned int __attribute__((unused))current_line)
 		h = h->next;
 	}
 }
+/**
+* pint - Peeks and print the topmost element
+*
+*@head: Head of the linked list
+*@current_line: Current line in the script
+*/
+void pint(stack_t **head, unsigned int current_line)
+{
+	if (*head)
+		printf("%d\n", (*head)->n);
+	else
+	{
+		printf("L%u: can't pint, stack empty\n", current_line);
+		exit(EXIT_FAILURE);
+	}
+}

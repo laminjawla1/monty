@@ -12,7 +12,7 @@ void (*get_opcode(char *identifier))(stack_t **stack, unsigned int line_number)
 	instruction_t routines[] = {
 		{"push", push},
 		{"pall", pall},
-		/*{"pint", pint},*/
+		{"pint", pint},
 		/*{"pop", pop},*/
 		/*{"swap", swap},*/
 		{NULL, NULL},
