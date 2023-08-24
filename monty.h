@@ -68,7 +68,7 @@ void shutdown(void);
 
 /*Utilities*/
 void free_dlist(stack_t *head);
-size_t dlist_len(stack *head);
+size_t dlist_len(stack_t *head);
 
 /*Linked list*/
 stack_t *create_node(const int n);

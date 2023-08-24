@@ -23,7 +23,7 @@ void free_dlist(stack_t *head)
 *
 *Return: len(stack)
 */
-size_t dlist_len(stack *head)
+size_t dlist_len(stack_t *head)
 {
 	size_t len = 0;
 
