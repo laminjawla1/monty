@@ -82,4 +82,5 @@ void pint(stack_t **head, unsigned int current_line);
 void pop(stack_t **head, unsigned int current_line);
 void swap(stack_t **head, unsigned int current_line);
 void add(stack_t **head, unsigned int current_line);
+void nop(stack_t __attribute__((unused))**h, unsigned int l);
 #endif
