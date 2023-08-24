@@ -44,3 +44,15 @@ void nop(stack_t __attribute__((unused))**h, unsigned int l)
 {
 	(void)l;
 }
+/**
+* handle_error - Prints an error message and exits the program
+*
+*@message: Error message
+*@current_line: Current line in the script
+*/
+void handle_error(const char *message, unsigned int current_line)
+{
+	fprintf(stderr, "L%u: %s\n", current_line, message);
+	shutdown();
+	exit(EXIT_FAILURE);
+}

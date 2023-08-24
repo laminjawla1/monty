@@ -9,16 +9,8 @@
 void pchar(stack_t **head, unsigned int current_line)
 {
 	if (!*head)
-	{
-		fprintf(stderr, "L%u: can't pchar, stack empty\n", current_line);
-		shutdown();
-		exit(EXIT_FAILURE);
-	}
+		handle_error("can't pchar, stack empty", current_line);
 	if ((*head)->n < ASCII_MIN || (*head)->n > ASCII_MAX)
-	{
-		fprintf(stderr, "L%u: can't pchar, value out of range\n", current_line);
-		shutdown();
-		exit(EXIT_FAILURE);
-	}
+		handle_error("can't pchar, value out of range", current_line);
 	printf("%c\n", (*head)->n);
 }

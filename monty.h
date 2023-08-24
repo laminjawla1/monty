@@ -73,6 +73,7 @@ void shutdown(void);
 void free_dlist(stack_t *head);
 size_t dlist_len(stack_t *head);
 void nop(stack_t __attribute__((unused))**h, unsigned int l);
+void handle_error(const char *message, unsigned int current_line);
 
 /*Linked list*/
 stack_t *create_node(const int n);

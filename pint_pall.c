@@ -25,9 +25,6 @@ void pall(stack_t **head, unsigned int __attribute__((unused))current_line)
 void pint(stack_t **head, unsigned int current_line)
 {
 	if (!*head)
-	{
-		fprintf(stderr, "L%u: can't pint, stack empty\n", current_line);
-		exit(EXIT_FAILURE);
-	}
+		handle_error("can't pint, stack empty", current_line);
 	printf("%d\n", (*head)->n);
 }
