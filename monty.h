@@ -96,4 +96,5 @@ void mod(stack_t **head, unsigned int current_line);
 
 /*Ascii*/
 void pchar(stack_t **head, unsigned int current_line);
+void pstr(stack_t **head, unsigned int __attribute__((unused))current_line);
 #endif
