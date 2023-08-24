@@ -86,4 +86,5 @@ void swap(stack_t **head, unsigned int current_line);
 /*Math functions*/
 void add(stack_t **head, unsigned int current_line);
 void sub(stack_t **head, unsigned int current_line);
+void _div(stack_t **head, unsigned int current_line);
 #endif
