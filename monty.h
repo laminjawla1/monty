@@ -7,6 +7,9 @@
 #include <string.h>
 #include <ctype.h>
 
+#define ASCII_MIN 0
+#define ASCII_MAX 127
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -69,6 +72,8 @@ void shutdown(void);
 /*Utilities*/
 void free_dlist(stack_t *head);
 size_t dlist_len(stack_t *head);
+void nop(stack_t __attribute__((unused))**h, unsigned int l);
+void handle_error(const char *message, unsigned int current_line);
 
 /*Linked list*/
 stack_t *create_node(const int n);
@@ -81,6 +86,14 @@ void pall(stack_t **head, unsigned int __attribute__((unused))current_line);
 void pint(stack_t **head, unsigned int current_line);
 void pop(stack_t **head, unsigned int current_line);
 void swap(stack_t **head, unsigned int current_line);
+
+/*Math functions*/
 void add(stack_t **head, unsigned int current_line);
-void nop(stack_t __attribute__((unused))**h, unsigned int l);
+void sub(stack_t **head, unsigned int current_line);
+void _div(stack_t **head, unsigned int current_line);
+void mul(stack_t **head, unsigned int current_line);
+void mod(stack_t **head, unsigned int current_line);
+
+/*Ascii*/
+void pchar(stack_t **head, unsigned int current_line);
 #endif

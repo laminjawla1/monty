@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
 			{
 				fprintf(stderr, "L%ld: unknown instruction %s\n",
 					process.line_count, command);
+				free(cmd);
 				shutdown();
 				exit(EXIT_FAILURE);
 			}
