@@ -30,6 +30,6 @@ void sub(stack_t **head, unsigned int current_line)
 		fprintf(stderr, "L%u: can't sub, stack too short", current_line);
 		exit(EXIT_FAILURE);
 	}
-	(*head)->next->n -= (*head)->n;
+	(*head)->next->n = (*head)->n - (*head)->next->n;
 	pop(head, current_line);
 }
