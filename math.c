@@ -76,3 +76,27 @@ void mul(stack_t **head, unsigned int current_line)
 	(*head)->next->n *= (*head)->n;
 	pop(head, current_line);
 }
+/**
+* mod - Mod the second top element of the stack
+*	by the top element of the stack
+*
+*@head: Head of the stack
+*@current_line: Current line
+*/
+void mod(stack_t **head, unsigned int current_line)
+{
+	if (dlist_len(*head) < 2)
+	{
+		fprintf(stderr, "L%u: can't mod, stack too short\n", current_line);
+		shutdown();
+		exit(EXIT_FAILURE);
+	}
+	if ((*head)->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", current_line);
+		shutdown();
+		exit(EXIT_FAILURE);
+	}
+	(*head)->next->n %= (*head)->n;
+	pop(head, current_line);
+}

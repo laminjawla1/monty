@@ -88,4 +88,5 @@ void add(stack_t **head, unsigned int current_line);
 void sub(stack_t **head, unsigned int current_line);
 void _div(stack_t **head, unsigned int current_line);
 void mul(stack_t **head, unsigned int current_line);
+void mod(stack_t **head, unsigned int current_line);
 #endif
