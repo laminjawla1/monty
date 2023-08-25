@@ -103,4 +103,8 @@ void sub(stack_t **head, unsigned int current_line);
 void _div(stack_t **head, unsigned int current_line);
 void mul(stack_t **head, unsigned int current_line);
 void mod(stack_t **head, unsigned int current_line);
+
+/*Datastructure modes*/
+void stack(stack_t __attribute__((unused))**head, unsigned int l);
+void queue(stack_t __attribute__((unused))**head, unsigned int l);
 #endif
