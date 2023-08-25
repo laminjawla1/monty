@@ -7,6 +7,7 @@
 #include <string.h>
 #include <ctype.h>
 
+/*Global Macros*/
 #define ASCII_MIN 0
 #define ASCII_MAX 127
 
@@ -86,15 +87,16 @@ void pall(stack_t **head, unsigned int __attribute__((unused))current_line);
 void pint(stack_t **head, unsigned int current_line);
 void pop(stack_t **head, unsigned int current_line);
 void swap(stack_t **head, unsigned int current_line);
+void rotl(stack_t **head, unsigned int current_line);
 
-/*Math functions*/
+/*Ascii*/
+void pchar(stack_t **head, unsigned int current_line);
+void pstr(stack_t **head, unsigned int __attribute__((unused))current_line);
+
+/*Math*/
 void add(stack_t **head, unsigned int current_line);
 void sub(stack_t **head, unsigned int current_line);
 void _div(stack_t **head, unsigned int current_line);
 void mul(stack_t **head, unsigned int current_line);
 void mod(stack_t **head, unsigned int current_line);
-
-/*Ascii*/
-void pchar(stack_t **head, unsigned int current_line);
-void pstr(stack_t **head, unsigned int __attribute__((unused))current_line);
 #endif
